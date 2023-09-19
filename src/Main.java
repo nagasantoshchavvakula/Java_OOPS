@@ -1,4 +1,5 @@
-
+/*
+//Creating Constructor
 public class Main {
 
 	int x;
@@ -12,3 +13,18 @@ public class Main {
 	}
 
 }
+*/
+
+//Constructors can also take parameters, which is used to initialize attributes.
+public class Main {
+	  int x;
+
+	  public Main(int y) {
+	    x = y;
+	  }
+
+	  public static void main(String[] args) {
+	    Main myObj = new Main(50);
+	    System.out.println(myObj.x);
+	  }
+	}
