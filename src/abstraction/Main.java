@@ -10,6 +10,11 @@ public class Main {
 
 	}
 
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
 
 
