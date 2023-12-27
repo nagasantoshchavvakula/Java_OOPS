@@ -24,6 +24,6 @@ public class Main {
 	    String formattedDate = dateTime.format(myFormatObj);
 	    System.out.println("After formatting: " + formattedDate); //Displaying formatted date
 	    
-	  }
-
+	}
 }
+
