@@ -30,27 +30,28 @@ public class CreateFile {
 			e.printStackTrace();
 		}
 		
-		//#2 File Output steam along with Scanner
+		//#2 File Output stream along with Scanner
 	
 		try {
-			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter the file name with path:");
-			String fileName = sc.nextLine();
-			FileOutputStream fos = new FileOutputStream(fileName,true);
-			System.out.println("Enter the Content:");
-			String Content = sc.nextLine();
-			byte b[] = Content.getBytes();
-			try {
-				fos.write(b);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			try {
-				fos.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			try (Scanner sc = new Scanner(System.in)) {
+				System.out.println("Enter the file name with path:");
+				String fileName = sc.nextLine();
+				FileOutputStream fos = new FileOutputStream(fileName,true);
+				System.out.println("Enter the Content:");
+				String Content = sc.nextLine();
+				byte b[] = Content.getBytes();
+				try {
+					fos.write(b);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				try {
+					fos.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
